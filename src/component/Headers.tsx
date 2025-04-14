@@ -13,12 +13,18 @@ export default function Header({
   currentDate,
 }: HeaderProps) {
   return (
-    <div className="h-[200px] bg-[url('/imgs/banner_header.png')] lg:px-64 md:px-10 bg-emerald-700">
-      <div className="flex h-1/2 justify-between">
+    <div className="h-[200px] bg-[url('/imgs/banner_header.png')] bg-teal-500 lg:px-64 md:px-10">
+      <div className="flex justify-between items-center">
         <div className="flex justify-between items-center">
-          <Image src="/imgs/logo.svg" alt="" width={100} height={100} />
+          <Image
+            src="/imgs/logo.svg"
+            alt=""
+            width={100}
+            height={100}
+            className="w-auto h-auto"
+          />
           <button
-            className="text-white rounded cursor-pointer ml-4 bg-gray-700 px-6 h-1/2 flex justify-between items-center"
+            className="text-white rounded cursor-pointer ml-4 border-b-gray-400 px-5 py-1 h-1/2 flex justify-between items-center"
             onClick={showModal}
           >
             <p>{selectedProjectName}</p>
@@ -32,7 +38,7 @@ export default function Header({
             </span>
           </button>
         </div>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center p-8">
           <p className="text-lg font-semibold text-amber-50">{currentDate}</p>
         </div>
       </div>
